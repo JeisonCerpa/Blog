@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
+use function Pest\Laravel\post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,9 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
+        Post::factory(10)->create();
+        $this->call(
             UserSeeder::class,
-            PostSeeder::class,
-        ]); 
+        ); 
+
+
     }
 }
