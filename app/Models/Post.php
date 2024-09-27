@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Post extends Model
 {
+    /*     protected $fillable = ['title', 'slug', 'content', 'category'];
+ */
+    protected $guarded = ['is_active'];
+
     use HasFactory;
 
     /*     protected $table = 'posts';*/
