@@ -5,6 +5,9 @@
         <label for="title">Título</label>
         <input type="text" name="title" id="title">
         <br>
+        <label for="title">Slug</label>
+        <input type="text" name="slug" id="slug">
+        <br>
         <label for="category">Categoría</label>
         <input type="text" name="category" id="category">
         <br>

@@ -11,7 +11,7 @@ use function Pest\Laravel\post;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-Route::apiResource('posts', PostController::class);
+Route::Resource('posts', PostController::class);
 
 
 Route::get('prueba', function(){
