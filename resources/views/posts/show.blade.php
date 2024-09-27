@@ -7,12 +7,12 @@
     <title>Laravel 11 | SHOW</title>
 </head>
 <body>
-    <a href="/posts">Volver a posts</a>
+    <a href="{{route('posts.index')}}">Volver a posts</a>
     <h1>Titulo: {{$post->title}}</h1>
     <p><b>Categoria:</b>{{$post->category}}</p>
     <p>Contenido: {{$post->content}}</p>
     <a href="/posts/{{$post->id}}/edit">Editar</a>
-    <form action="/posts/{{$post->id}}" method="POST">
+    <form action="{{route('posts.destroy', $post)}}" method="POST">
         @csrf
         @method('DELETE')
         <button type="submit">Eliminar</button>

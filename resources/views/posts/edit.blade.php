@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>Formulario para crear un nuevo post</h1>
-    <form action="/posts/{{$post->id}}" method="POST">
+    <form action="{{route('posts.edit',$post)}}" method="POST">
         @csrf
         @method('PUT')
         

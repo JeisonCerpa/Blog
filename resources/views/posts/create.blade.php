@@ -1,6 +1,6 @@
 <x-app-layout>
     <h1>Formulario para crear un nuevo post</h1>
-    <form action="/posts" method="POST">
+    <form action="{{route('posts.store')}}" method="POST">
         @csrf
         <label for="title">Título</label>
         <input type="text" name="title" id="title">
